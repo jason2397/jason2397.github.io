@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RobotFreak || </title>
+    <title>RobotFreak || rs485</title>
     <meta name="author" content="RobotFreak">
     <meta name="description" content="personal blog of a robot enthusiast ">
     <meta name="keywords" content="robot ">
@@ -149,56 +149,13 @@
                 </div>
 
                 <div id="main">
-                    <div id="home-head" style=background-image:url('home.jpg')>
-    <script>
-        var menu = document.getElementById("menu")
-        menu.className += " menu-color"
-    </script>
-     
-    <div id="home-info" class="home-info" @click="home_click">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>RobotFreak</h1>
-                <h3></h3>
-                <h5>personal blog of a robot enthusiast</h5>
-            </div>
-        </span>
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>rs485 </h1>
     </div>
-     
-</div>
-
-
-
-<div id="home-posts-wrap" class=>
-    <div id="home-posts">
-
-        <div id="posts">
-            
-
-<div class="post">
-
-    <a href="/2023/06/03/rs485/">
-        <h2>
-            rs485
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-        <span class="category">
-            <a href="/categories/hardware">
-                <span class="icon">
-                    <a-icon type="book" theme="filled" /></span>
-                hardware
-            </a>
-        </span>
-        
-
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <a-icon type="calendar" theme="filled" />
@@ -206,13 +163,37 @@
             2023/6/3
         </span>
 
+        
+        <span class="category">
+            <a href="/categories/hardware">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                hardware
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/communication-embedded" style=color:#ff7d73>
+                    communication embedded
+                </a>
+            </span>
+            
+        </span>
+        
     </div>
 
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>参考文章: <a target="_blank" rel="noopener" href="https://www.eltima.com/article/rs485-communication-guide/">https://www.eltima.com/article/rs485-communication-guide/</a></p>
+    <div class="content" v-pre>
+        <p>参考文章: <a target="_blank" rel="noopener" href="https://www.eltima.com/article/rs485-communication-guide/">https://www.eltima.com/article/rs485-communication-guide/</a></p>
 <p>RS485是一种在数据采集和工业控制中常用的通讯标准。它主要的优势之一就是可以在同一条总线上挂载多个设备，使得多个节点可以彼此连接。</p>
 <h1 id="什么是RS485"><a href="#什么是RS485" class="headerlink" title="什么是RS485"></a>什么是RS485</h1><p>RS-485(或EIA&#x2F;TIA-485)是通讯<strong>物理层的一种标准接口</strong>，一种信号传输的方法。RS-485被创造出来用于扩展RS-232的物理性能。</p>
 <p>RS-485的连接采用两线制（不包括GND）：正相数据线（A）、反相数据线（B）。A、B两相采用<strong>双绞线</strong>，传输信号的正反相，有效抑制了噪声。</p>
@@ -238,168 +219,8 @@
 <p>Modbus是工业电子设备中广泛应用的一种串行通讯协议。在Modbus中，通讯建立在一个主节点(master&#x2F;host&#x2F;client)和多个从节点(slave&#x2F;server)之间。主节点负责初始化数据交换。主节点可以主动将它的RS-485驱动转换到发送模式，同时其它RS-485设备工作在接收模式。从节点如果想要在通讯线上应答主节点，主节点会给它发送一个特殊的指令，给予目标设备权力，使其在一定时间内可以工作在发送模式下。</p>
 <p>Modbus是让设备间彼此进行交互的最简单的协议之一。它对设备制造商来说非常容易实现，这也是导致它流行的主要原因；同时对工程师、编程人员来说比较困难，因为实现最终解决方案的所有困难都转移到了他的肩上，要求他要查看好几页的寄存器和变量，它们的地址，写数据、读数据和数据转换的各种函数。</p>
 
-            
-        </div>
     </div>
 
-    <div class="post-tags">
-        
-        <span class="icon">
-            <a-icon type="tags" theme="filled" />
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/communication-embedded" style=color:#00a596>
-                communication embedded
-            </a>
-        </span>
-        
-    </div>
-
-    <a href="/2023/06/03/rs485/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-<div class="post">
-
-    <a href="/2023/06/01/hello-world/">
-        <h2>
-            Hello World
-        </h2>
-    </a>
-
-    <div class="category-and-date">
-
-        
-
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2023/6/1
-        </span>
-
-    </div>
-
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-
-    <div class="post-tags">
-        
-        
-    </div>
-
-    <a href="/2023/06/01/hello-world/ " class="go-post">
-        阅读全文
-    </a>
-</div>
-
-
-             
-<div class="page-current">
-
-    <div class="prev">
-        
-    </div>
-
-    <div class="page-index">
-
-        
-
-        <span class="current">
-            1
-        </span>
-
-        
-
-    </div>
-
-    <div class="next">
-        
-    </div>
-
-</div>
-
-        </div>
-    </div>
-    
-    <div id="home-card">
-        <a-affix :offset-top="card_top">
-    <a-card class="card-style" style="width: 300px">
-        <div class="avatar">
-            <img src="./source/amier.bmp " alt="头像">
-        </div>
-        <div class="name">
-            RobotFreak
-        </div>
-        <div class="descriptions">
-            
-            <div class="description">
-                静静地燃烧
-            </div>
-            
-            <div class="description">
-                直到熄灭
-            </div>
-            
-        </div>
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://github.com/jason2397">
-
-                    
-                    <a-icon type="github"
-                        theme="filled" />
-                    
-                </a>
-            </span>
-            
-            <span class="icon-link">
-                <a href="">
-
-                    
-                    <a-icon type="facebook"
-                        theme="" />
-                    
-                </a>
-            </span>
-            
-        </div>
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://space.bilibili.com/629226459?spm_id_from=333.1007.0.0">
-                    Bilibili
-                </a>
-            </div>
-            
-        </div>
-    </a-card>
-</a-affix>
-    </div>
     
 </div>
                      
