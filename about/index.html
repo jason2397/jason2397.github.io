@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RobotFreak || rs485</title>
+    <title>RobotFreak || about</title>
     <meta name="author" content="RobotFreak">
     <meta name="description" content="personal blog of a robot enthusiast ">
     <meta name="keywords" content="robot ">
@@ -153,7 +153,7 @@
 <link rel="stylesheet" href="/css/post-body.css">
 <div class="article">
     <div>
-        <h1>rs485 </h1>
+        <h1>about </h1>
     </div>
     <div class="info">
         <span class="date">
@@ -164,67 +164,39 @@
         </span>
 
         
-        <span class="category">
-            <a href="/categories/hardware">
-                <span class="icon">
-                    <a-icon type="book" theme="filled" />
-                </span>
-                hardware
-            </a>
-        </span>
-        
 
-        
-
-        <span class="tags">
-            <span class="icon">
-                <a-icon type="tags" theme="filled" />
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/communication" style=color:#03a9f4>
-                    communication
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/embedded" style=color:#03a9f4>
-                    embedded
-                </a>
-            </span>
-            
-        </span>
         
     </div>
 
     <div class="content" v-pre>
-        <p>参考文章: <a target="_blank" rel="noopener" href="https://www.eltima.com/article/rs485-communication-guide/">https://www.eltima.com/article/rs485-communication-guide/</a></p>
-<p>RS485是一种在数据采集和工业控制中常用的通讯标准。它主要的优势之一就是可以在同一条总线上挂载多个设备，使得多个节点可以彼此连接。</p>
-<h1 id="什么是RS485"><a href="#什么是RS485" class="headerlink" title="什么是RS485"></a>什么是RS485</h1><p>RS-485(或EIA&#x2F;TIA-485)是通讯<strong>物理层的一种标准接口</strong>，一种信号传输的方法。RS-485被创造出来用于扩展RS-232的物理性能。</p>
-<p>RS-485的连接采用两线制（不包括GND）：正相数据线（A）、反相数据线（B）。A、B两相采用<strong>双绞线</strong>，传输信号的正反相，有效抑制了噪声。</p>
-<p><img src="/../resources/rs485_DeviceConnection.png" alt="RS485 Device Connection"></p>
-<h1 id="通讯距离"><a href="#通讯距离" class="headerlink" title="通讯距离"></a>通讯距离</h1><p>RS-485采用差分的信号传输，有效抑制了噪声；同时，双绞线可以被屏蔽，确保了传输数据的保护。这些使得RS-485上的数据可以以较高的速度传输长距离，可以达到1200m传输速率100Kbit&#x2F;s。</p>
-<p>1200m是RS-485的最大线长。</p>
-<p>通常来说，线长（m）与数据传输速率（M bits per second, Mbps）的乘积不能超过108。比如，20米长的线的最大传输速率为5Mbits&#x2F;s。</p>
-<h1 id="RS-485的特点"><a href="#RS-485的特点" class="headerlink" title="RS-485的特点"></a>RS-485的特点</h1><ul>
-<li>半双工通讯</li>
-</ul>
-<p>由于RS-485的两根线实际上只用来传输同一个信号，这两根线可以看作一组数据线，它同一时刻只能进行发数据或者收数据，否则会产生信号的混乱。所以RS-485是一种半双工（可双向传输、但无法同时发送和接收）的通讯标准。</p>
+        <h1 id="RobotFreak"><a href="#RobotFreak" class="headerlink" title="RobotFreak"></a>RobotFreak</h1><p>Junior @ BIT, major in Mechatronic Engineering</p>
+<p>I started learning and exploring things about robots and robotics from sophomore in university. My current goal(for maybe 5 years) is to be familiar with some basic aspects about robots, like hardware, mechanical structure, controller development, perceptual and decision algorithm implementation and so on. On this basis, I decide to explore more in control. </p>
+<p>This blog is created to trace my learning of robotics, and it will be better if my blog would be of use to you.</p>
+<p>Things I am learning:</p>
 <ul>
-<li>总线通讯</li>
+<li>RL</li>
+<li>control for quadruped robot</li>
 </ul>
-<p>多个节点可挂载在同一条总线上</p>
+<p>Things waiting to be learned:</p>
 <ul>
-<li>传输距离长</li>
-<li>传输速度快</li>
+<li>自动控制原理(传统控制理论+现代控制理论)</li>
+<li>线性代数(快速重温一遍,理解概念)</li>
+<li>现代机器人学(从速度与静力开始)</li>
+<li>矩阵论</li>
+<li>概率论与数理统计(快速重温一遍)</li>
+<li>机器学习&#x2F;深度学习(为DRL巩固基础)</li>
+<li>机械(有待探索)</li>
+<li>电路(有待探索)</li>
 </ul>
-<h1 id="RS-485的通讯协议"><a href="#RS-485的通讯协议" class="headerlink" title="RS-485的通讯协议"></a>RS-485的通讯协议</h1><p>一种常用的RS-485的通讯协议的形式是定义一个主机，总线上剩下的节点均为从机。主机发送数据，从机只在总线上监听（接收）数据。也可以让每个节点独立地传输数据（意思应该是可以让多个节点发送，区别于上面那种方式），但这种情况下数据丢失的风险也会增大。</p>
-<p>RS-485常用的一种通讯协议为Modbus</p>
-<p><img src="/../resources/rs485_Modbus.png" alt="Modbus"></p>
-<p>Modbus是工业电子设备中广泛应用的一种串行通讯协议。在Modbus中，通讯建立在一个主节点(master&#x2F;host&#x2F;client)和多个从节点(slave&#x2F;server)之间。主节点负责初始化数据交换。主节点可以主动将它的RS-485驱动转换到发送模式，同时其它RS-485设备工作在接收模式。从节点如果想要在通讯线上应答主节点，主节点会给它发送一个特殊的指令，给予目标设备权力，使其在一定时间内可以工作在发送模式下。</p>
-<p>Modbus是让设备间彼此进行交互的最简单的协议之一。它对设备制造商来说非常容易实现，这也是导致它流行的主要原因；同时对工程师、编程人员来说比较困难，因为实现最终解决方案的所有困难都转移到了他的肩上，要求他要查看好几页的寄存器和变量，它们的地址，写数据、读数据和数据转换的各种函数。</p>
+<p>Projects waiting to be done:</p>
+<ul>
+<li>Holocubic&#x2F;自己设计一款类似的桌面小机器人</li>
+<li>trash classfication</li>
+<li>bluetooth serial host computer(蓝牙串口上位机,迭代改进)</li>
+<li>english words reciting software with GUI</li>
+<li>a small biped robot</li>
+<li>robotic arm</li>
+</ul>
 
     </div>
 
